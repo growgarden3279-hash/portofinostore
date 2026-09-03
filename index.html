@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Portofino Store - Catálogo Digital</title>
-    
-    <link rel="preload" href="portofino.png" as="image">
-    <link rel="icon" type="image/png" href="portofino.png">
-    <link rel="apple-touch-icon" href="portofino.png">
+    <title>Pedroso Store - Catálogo Digital</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +29,7 @@
             background: linear-gradient(135deg, #38070e 0%, #5c0f1b 50%, #7d1525 100%);
             color: white;
             text-align: center;
-            padding: 30px 15px;
+            padding: 35px 15px;
             position: sticky;
             top: 0;
             z-index: 10;
@@ -51,21 +47,9 @@
             margin: 0 auto;
         }
 
-        .header-logo {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            object-fit: cover;
-            background: #ffffff;
-            padding: 3px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
-            margin-bottom: 10px;
-            border: 3px solid #fbd5dc;
-        }
-
         header h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.1rem;
+            font-size: 2.3rem;
             letter-spacing: 2.5px;
             text-transform: uppercase;
             color: #ffffff;
@@ -77,10 +61,10 @@
             font-style: italic;
             color: #fdf2f4;
             background-color: rgba(255, 255, 255, 0.15);
-            padding: 5px 18px;
+            padding: 6px 20px;
             border-radius: 20px;
-            font-size: 0.88rem;
-            margin-top: 10px;
+            font-size: 0.9rem;
+            margin-top: 12px;
             display: inline-block;
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
@@ -328,8 +312,7 @@
 
     <header>
         <div class="brand-container">
-            <img src="portofino.png" alt="Logo Portofino Store" class="header-logo" onerror="this.style.display='none'">
-            <h1 id="header-title">Portofino Store</h1>
+            <h1 id="header-title">Pedroso Store</h1>
             <p id="header-subtitle">Elegancia mediterránea directo a tu puerta</p>
         </div>
     </header>
@@ -338,10 +321,9 @@
         <div class="container">
 
             <div class="search-container">
-                <input type="text" id="searchInput" class="search-input" placeholder="Buscar perfume, vaper, Karseell..." oninput="handleSearch(this.value)">
+                <input type="text" id="searchInput" class="search-input" placeholder="Buscar perfume, vaper, equipo de fútbol..." oninput="handleSearch(this.value)">
             </div>
 
-            <!-- 1. MENÚ PRINCIPAL -->
             <div id="categories-menu">
                 <div class="categories-grid">
                     <div class="category-card" onclick="showCategory('vapers')">
@@ -377,16 +359,15 @@
                     </div>
 
                     <div class="category-card" onclick="showCategory('remeras')">
-                        <img src="icono-ropa.jpg" alt="Indumentaria" class="category-thumb" loading="lazy" onerror="this.style.display='none'">
+                        <img src="icono-ropa.jpg" alt="Conjuntos de Fútbol" class="category-thumb" loading="lazy" onerror="this.style.display='none'">
                         <div class="category-info">
-                            <h2>Indumentaria Deportiva</h2>
-                            <p>Camisetas oficiales y conjuntos deportivos</p>
+                            <h2>Conjuntos De Futbol</h2>
+                            <p>Camisetas y shorts oficiales con tela dry-fit</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 2. SUBMENÚ DE PERFUMES -->
             <div id="subcategories-view" class="subcategories-section">
                 <button class="btn-back" onclick="showCategoriesMenu()">Volver a Categorías</button>
                 <div class="categories-grid">
@@ -411,7 +392,6 @@
                 </div>
             </div>
 
-            <!-- 3. CONTENEDOR DE PRODUCTOS -->
             <div id="catalog-view" class="catalog-section">
                 <button class="btn-back" onclick="goBackFromCatalog()">Volver</button>
                 <div id="catalog-container" class="catalog"></div>
@@ -420,7 +400,6 @@
         </div>
     </div>
 
-    <!-- MODAL AMPLIFICADOR -->
     <div id="imageModal" class="modal" onclick="closeZoom()">
         <span class="modal-close">&times;</span>
         <img class="modal-img" id="modalImage">
@@ -460,10 +439,26 @@
             { categoria: "cosmetica", titulo: "Máscara Capilar Karseell Maca Power Collagen (500ml)", descripcion: "Tratamiento reparador de colágeno y esencia de maca para cabello seco y químicamente tratado.", precio: "$15.000", imagen: "mascara-karseell.jpg" },
             { categoria: "cosmetica", titulo: "Aceite Capilar Karseell Maca Essence Oil (50ml)", descripcion: "Sérum reparador prensado en frío con esencia de Maca y Macadamia.", precio: "$10.000", imagen: "aceite-karseell.jpg" },
 
-            // --- REMERAS ---
-            { categoria: "remeras", titulo: "Remera Club Olimpia (Azul Patrón Mapa)", descripcion: "Camiseta oficial azul con sponsors. Tela deportiva dry-fit premium.", precio: "$12.000", imagen: "remera-olimpia.jpg" },
-
-            // --- PERFUMES (Ordenados exactamente del 1 al 42 según tu grilla) ---
+            // --- REMERAS / CONJUNTOS DE FÚTBOL ---
+            { categoria: "remeras", titulo: "Conjunto Selección de España", descripcion: "Conjunto suplente o de entrenamiento color turquesa/azul agua con detalles naranjas (Adidas).", precio: "$15.000", imagen: "remeras/remera (1).jpeg" },
+            { categoria: "remeras", titulo: "Conjunto FC Barcelona", descripcion: "Conjunto alternativo gris oscuro/azul noche con franjas fucsias y logo de Spotify (Nike).", precio: "$15.000", imagen: "remeras/remera (2).jpeg" },
+            { categoria: "remeras", titulo: "Conjunto Real Madrid", descripcion: "Conjunto visitante o de entrenamiento gris oscuro con paneles verde lima (Adidas).", precio: "$15.000", imagen: "remeras/remera (3).jpeg" },
+            { categoria: "remeras", titulo: "Conjunto Inter de Milán", descripcion: "Conjunto azul oscuro con detalles blancos en los hombros y Qatar Airways (Nike).", precio: "$15.000", imagen: "remeras/remera (4).jpeg" },
+            { categoria: "remeras", titulo: "Conjunto Selección de Alemania (Retro)", descripcion: "Conjunto retro/casual negro con mangas blancas y colores de la bandera (Adidas Originals).", precio: "$15.000", imagen: "remeras/remera (5).jpeg" },
+            { categoria: "remeras", titulo: "Conjunto Selección de Alemania (Titular)", descripcion: "Conjunto titular blanco con detalles negros, rojos y vivos naranjas (Adidas).", precio: "$15.000", imagen: "remeras/remera (6).jpeg" },
+            { categoria: "remeras", titulo: "Conjunto Selección de Alemania (Bordó)", descripcion: "Conjunto alternativo color rojo oscuro/bordó con detalles negros y blancos (Adidas).", precio: "$15.000", imagen: "remeras/remera (7).jpeg" },
+            { categoria: "remeras", titulo: "Conjunto Selección de México", descripcion: "Conjunto alternativo o de entrenamiento negro con detalles en verde neón (Adidas).", precio: "$15.000", imagen: "remeras/remera (8).jpeg" },
+            { categoria: "remeras", titulo: "Conjunto Selección de Alemania (Rojo)", descripcion: "Conjunto alternativo rojo brillante con detalles negros y blancos (Adidas).", precio: "$15.000", imagen: "remeras/remera (9).jpeg" },
+            { categoria: "remeras", titulo: "Conjunto Olympique de Marsella", descripcion: "Conjunto azul oscuro con detalles y escudo en color naranja/rojo (Puma). Tela dry-fit.", precio: "$15.000", imagen: "remeras/remera (10).jpeg" },
+            { categoria: "remeras", titulo: "Conjunto Boca Juniors", descripcion: "Conjunto alternativo naranja con detalles en azul oscuro y Betsson (Adidas).", precio: "$15.000", imagen: "remeras/remera (11).jpeg" },
+            { categoria: "remeras", titulo: "Conjunto Manchester United (Retro)", descripcion: "Conjunto clásico color rojo con cuello blanco y pantalón negro (Adidas Originals).", precio: "$15.000", imagen: "remeras/remera (12).jpeg" },
+            { categoria: "remeras", titulo: "Conjunto Manchester City", descripcion: "Conjunto de entrenamiento especial con patrón geométrico abstracto azul y rosa (Puma).", precio: "$15.000", imagen: "remeras/remera (13).jpeg" },
+            { categoria: "remeras", titulo: "Conjunto Real Madrid (Urbano)", descripcion: "Conjunto de entrenamiento negro con bloques amarillo neón y fucsia, logo del caballo (Adidas).", precio: "$15.000", imagen: "remeras/remera (14).jpeg" },
+            { categoria: "remeras", titulo: "Conjunto Real Madrid (Ceniza)", descripcion: "Conjunto retro/casual gris oscuro o marrón ceniza con tres tiras y escudo blanco (Adidas).", precio: "$15.000", imagen: "remeras/remera (15).jpeg" },
+            { categoria: "remeras", titulo: "Conjunto Inter de Milán (Entrenamiento)", descripcion: "Conjunto de entrenamiento azul oscuro con detalles blancos y Qatar Airways (Nike).", precio: "$15.000", imagen: "remeras/remera (16).jpeg" },
+            { categoria: "remeras", titulo: "Conjunto Bayern Múnich (Retro)", descripcion: "Conjunto clásico color rojo oscuro/borgoña con sutiles franjas verticales (Adidas Originals).", precio: "$15.000", imagen: "remeras/remera (17).jpeg" },
+            { categoria: "remeras", titulo: "Conjunto Selección de Alemania (Edición Especial)", descripcion: "Conjunto titular blanco con detalles tricolores y vivos naranjas (Adidas).", precio: "$15.000", imagen: "remeras/remera (18).jpeg" },
+            // --- PERFUMES ---
             { categoria: "perfumes-unisex", titulo: "Xerjoff Erba Pura", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (1).jpeg" },
             { categoria: "perfumes-mujer", titulo: "Lattafa Yara (Pink)", descripcion: "Eau de Parfum - Notas dulces, tropicales y avainilladas.", precio: "Consultar", imagen: "perfumes/perfume (2).jpeg" },
             { categoria: "perfumes-hombre", titulo: "Armaf Odyssey Tyrant Green", descripcion: "Eau de Parfum - Cítrico, aromático y amaderado.", precio: "Consultar", imagen: "perfumes/perfume (3).jpeg" },
@@ -502,128 +497,103 @@
             { categoria: "perfumes-mujer", titulo: "Fragancia Importada Femenina", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (36).jpeg" },
             { categoria: "perfumes-unisex", titulo: "Fragancia Oriental Unisex", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (37).jpeg" },
             { categoria: "perfumes-mujer", titulo: "Fragancia Importada Femenina", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (38).jpeg" },
-            { categoria: "perfumes-unisex", titulo: "Fragancia Oriental Unisex", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (39).jpeg" },
-            { categoria: "perfumes-unisex", titulo: "Fragancia Oriental Unisex", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (40).jpeg" },
-            { categoria: "perfumes-mujer", titulo: "Fragancia Importada Femenina", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (41).jpeg" },
-            { categoria: "perfumes-unisex", titulo: "Fragancia Oriental Unisex", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (42).jpeg" }
+            { categoria: "perfumes-unisex", titulo: "Fragancia Oriental Unisex", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (39).jpeg" }
         ];
 
-        let currentActiveCategoryType = '';
+        let currentActiveCategory = '';
 
-        function handleSearch(query) {
-            const term = query.toLowerCase().trim();
+        function showCategoriesMenu() {
+            document.getElementById('categories-menu').style.display = 'block';
+            document.getElementById('subcategories-view').style.display = 'none';
+            document.getElementById('catalog-view').style.display = 'none';
+            document.getElementById('searchInput').value = '';
+        }
+
+        function showPerfumeSubmenu() {
+            document.getElementById('categories-menu').style.display = 'none';
+            document.getElementById('subcategories-view').style.display = 'block';
+            document.getElementById('catalog-view').style.display = 'none';
+        }
+
+        function showCategory(categoria) {
+            currentActiveCategory = categoria;
+            document.getElementById('categories-menu').style.display = 'none';
+            document.getElementById('subcategories-view').style.display = 'none';
+            document.getElementById('catalog-view').style.display = 'block';
+
+            const filtered = productos.filter(p => p.categoria === categoria);
+            renderCatalog(filtered);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function goBackFromCatalog() {
+            if (currentActiveCategory.startsWith('perfumes-')) {
+                showPerfumeSubmenu();
+            } else {
+                showCategoriesMenu();
+            }
+        }
+
+        function renderCatalog(items) {
             const container = document.getElementById('catalog-container');
             container.innerHTML = '';
 
-            if (term === '') {
+            if (items.length === 0) {
+                container.innerHTML = `<p style="text-align:center; color:#d1a3ac; padding: 20px;">No se encontraron productos.</p>`;
+                return;
+            }
+
+            items.forEach(prod => {
+                const mensaje = encodeURIComponent(`Hola! Me interesa este producto: *${prod.titulo}* (${prod.precio}). ¿Hay stock?`);
+                const whatsappLink = `https://wa.me/${whatsappNumber}?text=${mensaje}`;
+
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="img-container" onclick="openZoom('${prod.imagen}')">
+                        <img src="${prod.imagen}" alt="${prod.titulo}" loading="lazy" onerror="this.src='icono-perfumes.jpg'">
+                        <div class="zoom-hint">🔍 Toca para ampliar</div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">${prod.titulo}</h3>
+                        <p class="card-description">${prod.descripcion}</p>
+                        <div class="card-price">${prod.precio}</div>
+                        <a href="${whatsappLink}" target="_blank" class="btn-whatsapp">Consultar por WhatsApp</a>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function handleSearch(query) {
+            const text = query.toLowerCase().trim();
+            const catalogView = document.getElementById('catalog-view');
+            const categoriesMenu = document.getElementById('categories-menu');
+            const subcategoriesView = document.getElementById('subcategories-view');
+
+            if (text === '') {
                 showCategoriesMenu();
                 return;
             }
 
-            document.getElementById('categories-menu').style.display = 'none';
-            document.getElementById('subcategories-view').style.display = 'none';
-            document.getElementById('header-subtitle').innerText = `Resultados para: "${query}"`;
+            categoriesMenu.style.display = 'none';
+            subcategoriesView.style.display = 'none';
+            catalogView.style.display = 'block';
 
-            const filtrados = productos.filter(p => 
-                p.titulo.toLowerCase().includes(term) || p.descripcion.toLowerCase().includes(term)
+            const filtered = productos.filter(p => 
+                p.titulo.toLowerCase().includes(text) || 
+                p.descripcion.toLowerCase().includes(text) ||
+                p.categoria.toLowerCase().includes(text)
             );
 
-            if (filtrados.length === 0) {
-                container.innerHTML = `<div style="text-align: center; padding: 40px; color: #d1a3ac; font-weight: 500;">No se encontraron productos con "${query}".</div>`;
-            } else {
-                filtrados.forEach(prod => {
-                    const mensajeWsp = encodeURIComponent(`Hola, vengo de la web Portofino Store. Me interesa el producto: ${prod.titulo} (${prod.precio})`);
-                    const urlWsp = `https://wa.me/${whatsappNumber}?text=${mensajeWsp}`;
-
-                    const cardHTML = `
-                        <div class="card">
-                            <div class="img-container" onclick="openZoom('${prod.imagen}')">
-                                <img src="${prod.imagen}" alt="${prod.titulo}" loading="lazy" onerror="this.style.display='none'">
-                                <span class="zoom-hint">Toca para ampliar</span>
-                            </div>
-                            <div class="card-body">
-                                <h2 class="card-title">${prod.titulo}</h2>
-                                <p class="card-description">${prod.descripcion}</p>
-                                <div class="card-price">${prod.precio}</div>
-                                <a href="${urlWsp}" class="btn-whatsapp" target="_blank">CONSULTAR POR WHATSAPP</a>
-                            </div>
-                        </div>
-                    `;
-                    container.innerHTML += cardHTML;
-                });
-            }
-
-            document.getElementById('catalog-view').style.display = 'block';
+            renderCatalog(filtered);
         }
 
-        function showPerfumeSubmenu() {
-            currentActiveCategoryType = 'perfume';
-            document.getElementById('categories-menu').style.display = 'none';
-            document.getElementById('subcategories-view').style.display = 'block';
-            document.getElementById('header-subtitle').innerText = 'Seleccioná una categoría';
-            window.scrollTo(0, 0);
-        }
-
-        function showCategory(catName) {
-            currentActiveCategoryType = catName;
-            document.getElementById('categories-menu').style.display = 'none';
-            document.getElementById('subcategories-view').style.display = 'none';
-            document.getElementById('header-subtitle').innerText = 'Catálogo de Productos';
-
-            const container = document.getElementById('catalog-container');
-            container.innerHTML = ''; 
-
-            const filtrados = productos.filter(p => p.categoria === catName);
-
-            filtrados.forEach(prod => {
-                const mensajeWsp = encodeURIComponent(`Hola, vengo de la web Portofino Store. Me interesa el producto: ${prod.titulo} (${prod.precio})`);
-                const urlWsp = `https://wa.me/${whatsappNumber}?text=${mensajeWsp}`;
-
-                const cardHTML = `
-                    <div class="card">
-                        <div class="img-container" onclick="openZoom('${prod.imagen}')">
-                            <img src="${prod.imagen}" alt="${prod.titulo}" loading="lazy" onerror="this.style.display='none'">
-                            <span class="zoom-hint">Toca para ampliar</span>
-                        </div>
-                        <div class="card-body">
-                            <h2 class="card-title">${prod.titulo}</h2>
-                            <p class="card-description">${prod.descripcion}</p>
-                            <div class="card-price">${prod.precio}</div>
-                            <a href="${urlWsp}" class="btn-whatsapp" target="_blank">CONSULTAR POR WHATSAPP</a>
-                        </div>
-                    </div>
-                `;
-                container.innerHTML += cardHTML;
-            });
-
-            document.getElementById('catalog-view').style.display = 'block';
-            window.scrollTo(0, 0);
-        }
-
-        function goBackFromCatalog() {
-            document.getElementById('searchInput').value = '';
-            if (currentActiveCategoryType.startsWith('perfumes-')) {
-                document.getElementById('catalog-view').style.display = 'none';
-                document.getElementById('subcategories-view').style.display = 'block';
-                document.getElementById('header-subtitle').innerText = 'Seleccioná una categoría';
-            } else {
-                showCategoriesMenu();
-            }
-            window.scrollTo(0, 0);
-        }
-
-        function showCategoriesMenu() {
-            document.getElementById('searchInput').value = '';
-            document.getElementById('catalog-view').style.display = 'none';
-            document.getElementById('subcategories-view').style.display = 'none';
-            document.getElementById('categories-menu').style.display = 'block';
-            document.getElementById('header-subtitle').innerText = 'Elegancia mediterránea directo a tu puerta';
-            window.scrollTo(0, 0);
-        }
-
-        function openZoom(imageSrc) {
-            document.getElementById('modalImage').src = imageSrc;
-            document.getElementById('imageModal').style.display = 'flex';
+        function openZoom(imgSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'flex';
+            modalImg.src = imgSrc;
         }
 
         function closeZoom() {
