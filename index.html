@@ -341,6 +341,7 @@
                 <input type="text" id="searchInput" class="search-input" placeholder="Buscar perfume, vaper, Karseell..." oninput="handleSearch(this.value)">
             </div>
 
+            <!-- 1. MENÚ PRINCIPAL -->
             <div id="categories-menu">
                 <div class="categories-grid">
                     <div class="category-card" onclick="showCategory('vapers')">
@@ -385,6 +386,7 @@
                 </div>
             </div>
 
+            <!-- 2. SUBMENÚ DE PERFUMES -->
             <div id="subcategories-view" class="subcategories-section">
                 <button class="btn-back" onclick="showCategoriesMenu()">Volver a Categorías</button>
                 <div class="categories-grid">
@@ -409,6 +411,7 @@
                 </div>
             </div>
 
+            <!-- 3. CONTENEDOR DE PRODUCTOS -->
             <div id="catalog-view" class="catalog-section">
                 <button class="btn-back" onclick="goBackFromCatalog()">Volver</button>
                 <div id="catalog-container" class="catalog"></div>
@@ -417,6 +420,7 @@
         </div>
     </div>
 
+    <!-- MODAL AMPLIFICADOR -->
     <div id="imageModal" class="modal" onclick="closeZoom()">
         <span class="modal-close">&times;</span>
         <img class="modal-img" id="modalImage">
@@ -459,48 +463,49 @@
             // --- REMERAS ---
             { categoria: "remeras", titulo: "Remera Club Olimpia (Azul Patrón Mapa)", descripcion: "Camiseta oficial azul con sponsors. Tela deportiva dry-fit premium.", precio: "$12.000", imagen: "remera-olimpia.jpg" },
 
-            // --- PERFUMES HOMBRE ---
-            { categoria: "perfumes-hombre", titulo: "Al Haramain Amber Oud (Dubai Night)", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (1).jpeg" },
-            { categoria: "perfumes-hombre", titulo: "Al Haramain Amber Oud (Gris/Silver)", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (2).jpeg" },
-            { categoria: "perfumes-hombre", titulo: "Al Haramain Amber Oud (Gold)", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (3).jpeg" },
-            { categoria: "perfumes-hombre", titulo: "Al Haramain Amber Oud (White)", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (4).jpeg" },
-            { categoria: "perfumes-hombre", titulo: "Al Haramain Amber Oud (Tobacco Edition)", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (5).jpeg" },
-            { categoria: "perfumes-hombre", titulo: "Afnan Turathi Blue", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (6).jpeg" },
-            { categoria: "perfumes-hombre", titulo: "Al Haramain Amber Oud (Rouge)", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (7).jpeg" },
-            { categoria: "perfumes-hombre", titulo: "Lattafa Asad", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (8).jpeg" },
-            { categoria: "perfumes-hombre", titulo: "Armaf Club de Nuit Intense Man", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (9).jpeg" },
-            { categoria: "perfumes-hombre", titulo: "Lattafa Asad Zanzibar", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (10).jpeg" },
-            { categoria: "perfumes-hombre", titulo: "Lattafa Fakhar Black", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (11).jpeg" },
-            { categoria: "perfumes-hombre", titulo: "Afnan 9PM", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (12).jpeg" },
-
-            // --- PERFUMES MUJER ---
-            { categoria: "perfumes-mujer", titulo: "Lattafa Yara (White/Original)", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (13).jpeg" },
-            { categoria: "perfumes-mujer", titulo: "Lattafa Yara (Pink)", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (14).jpeg" },
-            { categoria: "perfumes-mujer", titulo: "Lattafa Yara (Moi/Black)", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (15).jpeg" },
-            { categoria: "perfumes-mujer", titulo: "Lattafa Yara (Tous)", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (16).jpeg" },
-            { categoria: "perfumes-mujer", titulo: "Lattafa Ameerat Al Arab", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (17).jpeg" },
-            { categoria: "perfumes-mujer", titulo: "Lattafa Fakhar Rose", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (18).jpeg" },
-            { categoria: "perfumes-mujer", titulo: "Fragancia Femenina Dulce 1", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (19).jpeg" },
-            { categoria: "perfumes-mujer", titulo: "Fragancia Femenina Dulce 2", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (20).jpeg" },
-            { categoria: "perfumes-mujer", titulo: "Fragancia Femenina Dulce 3", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (21).jpeg" },
-            { categoria: "perfumes-mujer", titulo: "Fragancia Femenina Dulce 4", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (22).jpeg" },
-
-            // --- PERFUMES UNISEX ---
-            { categoria: "perfumes-unisex", titulo: "Xerjoff Erba Pura", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (23).jpeg" },
-            { categoria: "perfumes-unisex", titulo: "Lattafa Khamrah", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (24).jpeg" },
-            { categoria: "perfumes-unisex", titulo: "Lattafa Bade'e Al Oud (Oud for Glory)", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (25).jpeg" },
-            { categoria: "perfumes-unisex", titulo: "Lattafa Bade'e Al Oud (Honor & Glory)", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (26).jpeg" },
-            { categoria: "perfumes-unisex", titulo: "Lattafa Qaed Al Fursan", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (27).jpeg" },
-            { categoria: "perfumes-unisex", titulo: "Lattafa Nebras", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (28).jpeg" },
-            { categoria: "perfumes-unisex", titulo: "Lattafa Raghba", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (29).jpeg" },
-            { categoria: "perfumes-unisex", titulo: "Fragancia Unisex Oriental 1", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (30).jpeg" },
-            { categoria: "perfumes-unisex", titulo: "Fragancia Unisex Oriental 2", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (31).jpeg" },
-            { categoria: "perfumes-unisex", titulo: "Fragancia Unisex Oriental 3", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (32).jpeg" },
-            { categoria: "perfumes-unisex", titulo: "Fragancia Unisex Oriental 4", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (33).jpeg" },
-            { categoria: "perfumes-unisex", titulo: "Fragancia Unisex Oriental 5", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (34).jpeg" },
-            { categoria: "perfumes-unisex", titulo: "Fragancia Unisex Oriental 6", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (35).jpeg" },
-            { categoria: "perfumes-unisex", titulo: "Fragancia Unisex Oriental 7", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (36).jpeg" },
-            { categoria: "perfumes-unisex", titulo: "Fragancia Unisex Oriental 8", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (37).jpeg" }
+            // --- PERFUMES (Ordenados exactamente del 1 al 42 según tu grilla) ---
+            { categoria: "perfumes-unisex", titulo: "Xerjoff Erba Pura", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (1).jpeg" },
+            { categoria: "perfumes-mujer", titulo: "Lattafa Yara (Pink)", descripcion: "Eau de Parfum - Notas dulces, tropicales y avainilladas.", precio: "Consultar", imagen: "perfumes/perfume (2).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Armaf Odyssey Tyrant Green", descripcion: "Eau de Parfum - Cítrico, aromático y amaderado.", precio: "Consultar", imagen: "perfumes/perfume (3).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Lattafa Khamrah", descripcion: "Eau de Parfum - Especiado avainillado, cálido y lujoso.", precio: "Consultar", imagen: "perfumes/perfume (4).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Lattafa Bade'e Al Oud (Oud for Glory)", descripcion: "Eau de Parfum - Amaderado, ahumado y profundo.", precio: "Consultar", imagen: "perfumes/perfume (5).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Lattafa Asad", descripcion: "Eau de Parfum - Especiado, ámbar y cálido.", precio: "Consultar", imagen: "perfumes/perfume (6).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Lattafa Bade'e Al Oud (Honor & Glory)", descripcion: "Eau de Parfum - Gourmand tropical amaderado.", precio: "Consultar", imagen: "perfumes/perfume (7).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Al Haramain Amber Oud (Gold)", descripcion: "Eau de Parfum - Frutal, dulce y ambarado.", precio: "Consultar", imagen: "perfumes/perfume (8).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Al Haramain Amber Oud (Tobacco Edition)", descripcion: "Eau de Parfum - Especiado tabaco y vainilla.", precio: "Consultar", imagen: "perfumes/perfume (9).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Al Haramain Amber Oud (Rouge)", descripcion: "Eau de Parfum - Ámbar floral amaderado.", precio: "Consultar", imagen: "perfumes/perfume (10).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Armaf Club de Nuit Intense Man", descripcion: "Eau de Parfum - Amaderado especiado de alta fijación.", precio: "Consultar", imagen: "perfumes/perfume (11).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Armaf Club de Nuit Urban Man Elixir", descripcion: "Eau de Parfum - Fresco, frutal y amaderado.", precio: "Consultar", imagen: "perfumes/perfume (12).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Afnan Turathi Blue", descripcion: "Eau de Parfum - Cítrico amaderado fresco.", precio: "Consultar", imagen: "perfumes/perfume (13).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Afnan 9PM", descripcion: "Eau de Parfum - Dulce, avainillado y ambarado.", precio: "Consultar", imagen: "perfumes/perfume (14).jpeg" },
+            { categoria: "perfumes-mujer", titulo: "Lattafa Yara (White / Moi)", descripcion: "Eau de Parfum - Cremoso, floral y almizclado.", precio: "Consultar", imagen: "perfumes/perfume (15).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Lattafa Qaed Al Fursan", descripcion: "Eau de Parfum - Tropical, piña y amaderado.", precio: "Consultar", imagen: "perfumes/perfume (16).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Lattafa Fakhar Black", descripcion: "Eau de Parfum - Aromático, frutal y fresco.", precio: "Consultar", imagen: "perfumes/perfume (17).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Paris Corner Emir Toffee Coffee", descripcion: "Eau de Parfum - Gourmand café y caramelo.", precio: "Consultar", imagen: "perfumes/perfume (18).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Armaf Club de Nuit Sillage / Milestone", descripcion: "Eau de Parfum - Fresco metálico y almizclado.", precio: "Consultar", imagen: "perfumes/perfume (19).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Al Haramain Amber Oud (Silver / Gris)", descripcion: "Eau de Parfum - Fresco amaderado verde.", precio: "Consultar", imagen: "perfumes/perfume (20).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Lattafa Asad Zanzibar", descripcion: "Eau de Parfum - Tropical, coco y salado.", precio: "Consultar", imagen: "perfumes/perfume (21).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Al Haramain Amber Oud (White)", descripcion: "Eau de Parfum - Oriental floral almizclado.", precio: "Consultar", imagen: "perfumes/perfume (22).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Armaf Club de Nuit (Iconic / Edición Especial)", descripcion: "Eau de Parfum - Elegante y sofisticado.", precio: "Consultar", imagen: "perfumes/perfume (23).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Lattafa Fakhar Rose", descripcion: "Eau de Parfum - Floral blanco ambarado.", precio: "Consultar", imagen: "perfumes/perfume (24).jpeg" },
+            { categoria: "perfumes-mujer", titulo: "Lattafa Nebras", descripcion: "Eau de Parfum - Vainilla gourmand, cacao y frutos rojos.", precio: "Consultar", imagen: "perfumes/perfume (25).jpeg" },
+            { categoria: "perfumes-mujer", titulo: "Lattafa Raghba", descripcion: "Eau de Parfum - Vainilla, oud y azúcar quemado.", precio: "Consultar", imagen: "perfumes/perfume (26).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Al Haramain Amber Oud (Dubai Night / Blue)", descripcion: "Eau de Parfum - Amaderado aromático.", precio: "Consultar", imagen: "perfumes/perfume (27).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Lattafa Ameerat Al Arab", descripcion: "Eau de Parfum - Floral almizclado fresco.", precio: "Consultar", imagen: "perfumes/perfume (28).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Fragancia Importada Hombres / Unisex", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (29).jpeg" },
+            { categoria: "perfumes-hombre", titulo: "Fragancia Importada Hombres / Unisex", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (30).jpeg" },
+            { categoria: "perfumes-unisex", titulo: "Fragancia Oriental Unisex", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (31).jpeg" },
+            { categoria: "perfumes-unisex", titulo: "Fragancia Oriental Unisex", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (32).jpeg" },
+            { categoria: "perfumes-unisex", titulo: "Fragancia Oriental Unisex", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (33).jpeg" },
+            { categoria: "perfumes-mujer", titulo: "Fragancia Importada Femenina", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (34).jpeg" },
+            { categoria: "perfumes-unisex", titulo: "Fragancia Oriental Unisex", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (35).jpeg" },
+            { categoria: "perfumes-mujer", titulo: "Fragancia Importada Femenina", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (36).jpeg" },
+            { categoria: "perfumes-unisex", titulo: "Fragancia Oriental Unisex", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (37).jpeg" },
+            { categoria: "perfumes-mujer", titulo: "Fragancia Importada Femenina", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (38).jpeg" },
+            { categoria: "perfumes-unisex", titulo: "Fragancia Oriental Unisex", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (39).jpeg" },
+            { categoria: "perfumes-unisex", titulo: "Fragancia Oriental Unisex", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (40).jpeg" },
+            { categoria: "perfumes-mujer", titulo: "Fragancia Importada Femenina", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (41).jpeg" },
+            { categoria: "perfumes-unisex", titulo: "Fragancia Oriental Unisex", descripcion: "Eau de Parfum - Alta fijación y calidad importada.", precio: "Consultar", imagen: "perfumes/perfume (42).jpeg" }
         ];
 
         let currentActiveCategoryType = '';
